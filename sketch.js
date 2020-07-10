@@ -5,7 +5,7 @@ var Engine = Matter.Engine,
  
 var particles = [];
 var plinkos = [];
-var partivle;
+
 var divisionHeight=300;
 var score =0;
 function setup() {
@@ -76,24 +76,4 @@ function draw() {
      
      divisions[k].display();
    }
-}
-function mousePressed(){
-  if(gameState!=="end")
-  {
-    count++;
-    particles(mouseX,10,10,10);
-  }
-  if(partivles!=null)
-  {
-    particle.display();
-    if(particles.body.position.y>760)
-    {
-      if(particles.body.position.x<300)
-      {
-        score=score+500;
-        particles=null;
-        if(count>=5)gameState="end";
-      }
-    }
-  }
 }
